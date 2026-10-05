@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Default Theme: Emerald & Forest */
+    --color-bg: #F4F7F5;
+    --color-surface: #FFFFFF;
+    --color-surface-subtle: #EBF1ED;
+    --color-border: #DDE7E1;
+    --color-text-main: #0B2518;
+    --color-text-muted: #4B5E53;
+    --color-text-subtle: #6B7F73;
+    --color-accent: #059669;
+    --color-accent-hover: #047857;
+    --color-accent-subtle: #ECFDF5;
+    --color-whatsapp: #25D366;
+  }
+
+  /* Theme 2: Nordic Minimalist */
+  [data-theme="nordic"] {
+    --color-bg: #F8FAFC;
+    --color-surface: #FFFFFF;
+    --color-surface-subtle: #F1F5F9;
+    --color-border: #E2E8F0;
+    --color-text-main: #0F172A;
+    --color-text-muted: #475569;
+    --color-text-subtle: #64748B;
+    --color-accent: #2563EB;
+    --color-accent-hover: #1D4ED8;
+    --color-accent-subtle: #EFF6FF;
+    --color-whatsapp: #10B981;
+  }
+
+  /* Theme 3: Warm Terracotta & Sand */
+  [data-theme="terracotta"] {
+    --color-bg: #FAF6F0;
+    --color-surface: #FFFFFF;
+    --color-surface-subtle: #F2EAE0;
+    --color-border: #E8DDD0;
+    --color-text-main: #2A1F1B;
+    --color-text-muted: #5D5048;
+    --color-text-subtle: #7D7068;
+    --color-accent: #C25934;
+    --color-accent-hover: #A64724;
+    --color-accent-subtle: #FDF3EC;
+    --color-whatsapp: #15803D;
+  }
+
+  /* Theme 4: Midnight Obsidian */
+  [data-theme="midnight"] {
+    --color-bg: #0A0E12;
+    --color-surface: #121820;
+    --color-surface-subtle: #19222D;
+    --color-border: #232E3C;
+    --color-text-main: #F1F5F9;
+    --color-text-muted: #94A3B8;
+    --color-text-subtle: #64748B;
+    --color-accent: #10B981;
+    --color-accent-hover: #059669;
+    --color-accent-subtle: #0B2920;
+    --color-whatsapp: #25D366;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  h1, h2, .font-serif-display {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.card-lift {
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-lift:hover {
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-lift {
+    transition: none;
+  }
+  .card-lift:hover {
+    transform: none;
+  }
+}

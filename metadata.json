@@ -1,0 +1,8 @@
+{
+  "name": "WhatsApp Store",
+  "description": "Effortlessly browse quality products and place your orders directly through WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
